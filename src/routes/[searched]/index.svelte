@@ -27,7 +27,7 @@
 		{#each songResults as song}
 			<button
 				on:click={goto(`${$page.params.searched}/${song.trackId}`)}
-				class="p-3 flex bg-white rounded-md bg-opacity-20 border-2 border-white border-opacity-30"
+				class="p-3 flex bg-white rounded-md bg-opacity-20 border-2 border-white border-opacity-30 hover:bg-blue-300 transition-all"
 			>
 				<img src={song.artworkUrl100} alt="img" class="rounded-md mr-4 w-1/4" />
 				<div class="flex flex-col items-start text-left">

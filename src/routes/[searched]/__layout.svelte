@@ -17,7 +17,7 @@
 		on:click={() => {
 			goto('/');
 		}}
-		class="flex items-center justify-center text-white"
+		class="flex items-center justify-center text-white hover:bg-blue-300 transition-all"
 	>
 		<img src={home} alt="back" class="h-5" />
 	</button>
