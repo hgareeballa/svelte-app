@@ -2441,9 +2441,9 @@ function init(settings = default_settings) {
     amp: false,
     dev: false,
     entry: {
-      file: assets + "/_app/start-9476d477.js",
+      file: assets + "/_app/start-3c45d65a.js",
       css: [assets + "/_app/assets/start-d5b4de3e.css"],
-      js: [assets + "/_app/start-9476d477.js", assets + "/_app/chunks/vendor-5fee9403.js", assets + "/_app/chunks/singletons-12a22614.js"]
+      js: [assets + "/_app/start-3c45d65a.js", assets + "/_app/chunks/vendor-bdb054b9.js", assets + "/_app/chunks/singletons-12a22614.js"]
     },
     fetched: void 0,
     floc: false,
@@ -2493,13 +2493,6 @@ var manifest = {
     },
     {
       type: "page",
-      pattern: /^\/([^/]+?)\/test\/?$/,
-      params: (m) => ({ searched: d(m[1]) }),
-      a: ["src/routes/__layout.svelte", "src/routes/[searched]/__layout.svelte", "src/routes/[searched]/test.svelte"],
-      b: [".svelte-kit/build/components/error.svelte"]
-    },
-    {
-      type: "page",
       pattern: /^\/([^/]+?)\/([^/]+?)\/?$/,
       params: (m) => ({ searched: d(m[1]), songId: d(m[2]) }),
       a: ["src/routes/__layout.svelte", "src/routes/[searched]/__layout.svelte", "src/routes/[searched]/[songId].svelte"],
@@ -2529,14 +2522,11 @@ var module_lookup = {
   "src/routes/[searched]/index.svelte": () => Promise.resolve().then(function() {
     return index;
   }),
-  "src/routes/[searched]/test.svelte": () => Promise.resolve().then(function() {
-    return test;
-  }),
   "src/routes/[searched]/[songId].svelte": () => Promise.resolve().then(function() {
     return _songId_;
   })
 };
-var metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-a7b1b0ef.js", "css": ["assets/pages/__layout.svelte-d15d7f3f.css"], "js": ["pages/__layout.svelte-a7b1b0ef.js", "chunks/vendor-5fee9403.js"], "styles": [] }, ".svelte-kit/build/components/error.svelte": { "entry": "error.svelte-05baa268.js", "css": [], "js": ["error.svelte-05baa268.js", "chunks/vendor-5fee9403.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-3f8820d4.js", "css": [], "js": ["pages/index.svelte-3f8820d4.js", "chunks/vendor-5fee9403.js", "chunks/navigation-51f4a605.js", "chunks/singletons-12a22614.js"], "styles": [] }, "src/routes/[searched]/__layout.svelte": { "entry": "pages/[searched]/__layout.svelte-6775f316.js", "css": [], "js": ["pages/[searched]/__layout.svelte-6775f316.js", "chunks/vendor-5fee9403.js", "chunks/navigation-51f4a605.js", "chunks/singletons-12a22614.js"], "styles": [] }, "src/routes/[searched]/index.svelte": { "entry": "pages/[searched]/index.svelte-cd334a33.js", "css": [], "js": ["pages/[searched]/index.svelte-cd334a33.js", "chunks/vendor-5fee9403.js", "chunks/navigation-51f4a605.js", "chunks/singletons-12a22614.js"], "styles": [] }, "src/routes/[searched]/test.svelte": { "entry": "pages/[searched]/test.svelte-fd604cdc.js", "css": [], "js": ["pages/[searched]/test.svelte-fd604cdc.js", "chunks/vendor-5fee9403.js"], "styles": [] }, "src/routes/[searched]/[songId].svelte": { "entry": "pages/[searched]/[songId].svelte-28b86fec.js", "css": [], "js": ["pages/[searched]/[songId].svelte-28b86fec.js", "chunks/vendor-5fee9403.js"], "styles": [] } };
+var metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-635ce8a5.js", "css": ["assets/pages/__layout.svelte-d15d7f3f.css"], "js": ["pages/__layout.svelte-635ce8a5.js", "chunks/vendor-bdb054b9.js"], "styles": [] }, ".svelte-kit/build/components/error.svelte": { "entry": "error.svelte-7570a9c4.js", "css": [], "js": ["error.svelte-7570a9c4.js", "chunks/vendor-bdb054b9.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-47897526.js", "css": [], "js": ["pages/index.svelte-47897526.js", "chunks/vendor-bdb054b9.js", "chunks/navigation-51f4a605.js", "chunks/singletons-12a22614.js"], "styles": [] }, "src/routes/[searched]/__layout.svelte": { "entry": "pages/[searched]/__layout.svelte-cf068796.js", "css": [], "js": ["pages/[searched]/__layout.svelte-cf068796.js", "chunks/vendor-bdb054b9.js", "chunks/navigation-51f4a605.js", "chunks/singletons-12a22614.js"], "styles": [] }, "src/routes/[searched]/index.svelte": { "entry": "pages/[searched]/index.svelte-ec41f8ef.js", "css": [], "js": ["pages/[searched]/index.svelte-ec41f8ef.js", "chunks/vendor-bdb054b9.js", "chunks/stores-1dcf35a6.js", "chunks/navigation-51f4a605.js", "chunks/singletons-12a22614.js"], "styles": [] }, "src/routes/[searched]/[songId].svelte": { "entry": "pages/[searched]/[songId].svelte-5e4707ca.js", "css": [], "js": ["pages/[searched]/[songId].svelte-5e4707ca.js", "chunks/vendor-bdb054b9.js", "chunks/stores-1dcf35a6.js"], "styles": [] } };
 async function load_component(file) {
   const { entry, css: css2, js, styles } = metadata_lookup[file];
   return {
@@ -2566,7 +2556,7 @@ var __layout$1 = /* @__PURE__ */ Object.freeze({
   [Symbol.toStringTag]: "Module",
   "default": _layout$1
 });
-function load$1({ error: error2, status }) {
+function load({ error: error2, status }) {
   return { props: { error: error2, status } };
 }
 var Error$1 = create_ssr_component(($$result, $$props, $$bindings, slots) => {
@@ -2589,13 +2579,13 @@ var error = /* @__PURE__ */ Object.freeze({
   __proto__: null,
   [Symbol.toStringTag]: "Module",
   "default": Error$1,
-  load: load$1
+  load
 });
 var Routes = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   var searched = "";
   return `<section><div class="${"flex flex-col items-center justify-center"}"><div class="${"text-5xl text-center text-white font-semibold mb-12"}">Search an artist</div>
-    <div class="${"w-full flex rounded-md bg-white bg-opacity-20 p-1 border border-white border-opacity-30"}"><input class="${"w-4/5 bg-transparent text-white"}" type="${"text"}"${add_attribute("value", searched, 0)}>
-      <button class="${"w-1/5 p-2 rounded-md bg-white font-medium"}">Search</button></div></div></section>`;
+		<div class="${"w-full flex rounded-md bg-white bg-opacity-20 p-1 border border-white border-opacity-30"}"><input class="${"w-4/5 bg-transparent text-white"}" type="${"text"}"${add_attribute("value", searched, 0)}>
+			<button class="${"w-1/5 p-2 rounded-md bg-white font-medium"}">Search</button></div></div></section>`;
 });
 var index$1 = /* @__PURE__ */ Object.freeze({
   __proto__: null,
@@ -2644,44 +2634,42 @@ var U5Bsearchedu5D = create_ssr_component(($$result, $$props, $$bindings, slots)
   $$unsubscribe_page = subscribe(page, (value) => value);
   let songResults = [];
   $$unsubscribe_page();
-  return `<section><div class="${"grid grid-cols-2 md:grid-cols-3 grod-flow row gap-3"}">${each(songResults, (song) => `<button class="${"p-3 flex bg-white rounded-md bg-opacity-20 border-2 border-white border-opacity-30"}"><img${add_attribute("src", song.artworkUrl100, 0)} alt="${"img"}" class="${"rounded-md mr-4 w-1/4"}">
-      <div class="${"flex flex-col items-start text-left"}"><div class="${"mb-2 h-6 overflow-hidden"}">${escape(song.trackName)}</div>
-        <div class="${"text-xs font-bold"}">${escape(song.artistName)}</div></div>
-    </button>`)}</div></section>`;
+  return `<section><div class="${"grid grid-cols-2 md:grid-cols-3 grod-flow row gap-3"}">${songResults.length ? each(songResults, (song) => `<button class="${"p-3 flex bg-white rounded-md bg-opacity-20 border-2 border-white border-opacity-30"}"><img${add_attribute("src", song.artworkUrl100, 0)} alt="${"img"}" class="${"rounded-md mr-4 w-1/4"}">
+				<div class="${"flex flex-col items-start text-left"}"><div class="${"mb-2 h-6 overflow-hidden"}">${escape(song.trackName)}</div>
+					<div class="${"text-xs font-bold"}">${escape(song.artistName)}</div></div>
+			</button>`) : `<div class="${"items-center justify-center"}"><h1>Loading....!</h1>
+			</div>`}</div></section>`;
 });
 var index = /* @__PURE__ */ Object.freeze({
   __proto__: null,
   [Symbol.toStringTag]: "Module",
   "default": U5Bsearchedu5D
 });
-var Test = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  return `test 2`;
-});
-var test = /* @__PURE__ */ Object.freeze({
-  __proto__: null,
-  [Symbol.toStringTag]: "Module",
-  "default": Test
-});
-async function load({ page: page2 }) {
-  var songId = page2.params.songId;
-  const itunesSearched = await fetch(`https://itunes.apple.com/search?term=${songId}&entity=song`);
-  var res = await itunesSearched.json();
-  var songResults = res.results[0];
-  return { props: { songResults } };
-}
 var U5BsongIdu5D = create_ssr_component(($$result, $$props, $$bindings, slots) => {
-  let { songResults } = $$props;
-  if ($$props.songResults === void 0 && $$bindings.songResults && songResults !== void 0)
-    $$bindings.songResults(songResults);
-  return `<section><div class="${"mt-12 flex flex-col items-center justify-center"}"><h1 class="${"text-3xl font-bold text-center mb-12"}">${escape(songResults.trackName)}</h1>
-    <img${add_attribute("src", songResults.artworkUrl100, 0)} alt="${"img"}" class="${"w-1/4 rounded-md mb-12"}">
-    <audio controls><source${add_attribute("src", songResults.previewUrl, 0)} type="${"audio/mpeg"}"></audio></div></section>`;
+  let $page, $$unsubscribe_page;
+  $$unsubscribe_page = subscribe(page, (value) => $page = value);
+  let songResults = [];
+  let loading = true;
+  const getSong = async () => {
+    var songId = $page.params.songId;
+    const itunesSearched = await fetch(`https://itunes.apple.com/search?term=${songId}&entity=song`);
+    var res = await itunesSearched.json();
+    songResults = res.results[0];
+    loading = false;
+  };
+  getSong();
+  $$unsubscribe_page();
+  return `
+
+
+<section>${!loading ? `<div class="${"mt-12 flex flex-col items-center justify-center"}"><h1 class="${"text-3xl font-bold text-center mb-12"}">${escape(songResults.trackName)}</h1>
+			<img${add_attribute("src", songResults.artworkUrl100, 0)} alt="${"img"}" class="${"w-1/4 rounded-md mb-12"}">
+			<audio controls><source${add_attribute("src", songResults.previewUrl, 0)} type="${"audio/mpeg"}"></audio></div>` : `<div class="${"items-center justify-center"}"><h1>Loading....</h1></div>`}</section>`;
 });
 var _songId_ = /* @__PURE__ */ Object.freeze({
   __proto__: null,
   [Symbol.toStringTag]: "Module",
-  "default": U5BsongIdu5D,
-  load
+  "default": U5BsongIdu5D
 });
 
 // .svelte-kit/netlify/entry.js

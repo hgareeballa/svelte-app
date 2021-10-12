@@ -30,7 +30,9 @@
 				</div>
 			</button>
 		{:else}
-			<h1>Loading...</h1>
+			<div class="items-center justify-center">
+				<h1>Loading....!</h1>
+			</div>
 		{/each}
 	</div>
 </section>

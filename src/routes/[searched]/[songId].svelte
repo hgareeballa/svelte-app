@@ -1,4 +1,4 @@
-<script context="module">
+<!-- <script context="module">
 	export async function load({ page }) {
 		var songId = page.params.songId;
 		const itunesSearched = await fetch(
@@ -8,18 +8,37 @@
 		var songResults = res.results[0];
 		return { props: { songResults } };
 	}
-</script>
-
+</script> -->
 <script>
-	export let songResults;
+	import { page } from '$app/stores';
+
+	let songResults = [];
+	let loading = true;
+
+	const getSong = async () => {
+		var songId = $page.params.songId;
+		const itunesSearched = await fetch(
+			`https://itunes.apple.com/search?term=${songId}&entity=song`
+		);
+		var res = await itunesSearched.json();
+		songResults = res.results[0];
+		loading = false;
+	};
+	getSong();
 </script>
 
 <section>
-	<div class="mt-12 flex flex-col items-center justify-center">
-		<h1 class="text-3xl font-bold text-center mb-12">{songResults.trackName}</h1>
-		<img src={songResults.artworkUrl100} alt="img" class="w-1/4 rounded-md mb-12" />
-		<audio controls>
-			<source src={songResults.previewUrl} type="audio/mpeg" />
-		</audio>
-	</div>
+	{#if !loading}
+		<div class="mt-12 flex flex-col items-center justify-center">
+			<h1 class="text-3xl font-bold text-center mb-12">{songResults.trackName}</h1>
+			<img src={songResults.artworkUrl100} alt="img" class="w-1/4 rounded-md mb-12" />
+			<audio controls>
+				<source src={songResults.previewUrl} type="audio/mpeg" />
+			</audio>
+		</div>
+	{:else}
+		<div class="items-center justify-center">
+			<h1>Loading....</h1>
+		</div>
+	{/if}
 </section>

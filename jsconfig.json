@@ -2,6 +2,7 @@
 	"compilerOptions": {
 		"baseUrl": ".",
 		"paths": {
+			"$com": ["src/components"],
 			"$lib": ["src/lib"],
 			"$lib/*": ["src/lib/*"]
 		}
