@@ -1,6 +1,6 @@
 <script>
-	import back from '/backIcon.svg';
-	import home from '/homeIcon.svg';
+	import back from '../../../static/backIcon.svg';
+	import home from '../../../static/homeIcon.svg';
 	import { goto } from '$app/navigation';
 
 	const goBack = () => {

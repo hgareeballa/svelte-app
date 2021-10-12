@@ -2441,9 +2441,9 @@ function init(settings = default_settings) {
     amp: false,
     dev: false,
     entry: {
-      file: assets + "/_app/start-3c45d65a.js",
+      file: assets + "/_app/start-b37b16b8.js",
       css: [assets + "/_app/assets/start-d5b4de3e.css"],
-      js: [assets + "/_app/start-3c45d65a.js", assets + "/_app/chunks/vendor-bdb054b9.js", assets + "/_app/chunks/singletons-12a22614.js"]
+      js: [assets + "/_app/start-b37b16b8.js", assets + "/_app/chunks/vendor-bdb054b9.js", assets + "/_app/chunks/singletons-12a22614.js"]
     },
     fetched: void 0,
     floc: false,
@@ -2526,7 +2526,7 @@ var module_lookup = {
     return _songId_;
   })
 };
-var metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-635ce8a5.js", "css": ["assets/pages/__layout.svelte-d15d7f3f.css"], "js": ["pages/__layout.svelte-635ce8a5.js", "chunks/vendor-bdb054b9.js"], "styles": [] }, ".svelte-kit/build/components/error.svelte": { "entry": "error.svelte-7570a9c4.js", "css": [], "js": ["error.svelte-7570a9c4.js", "chunks/vendor-bdb054b9.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-47897526.js", "css": [], "js": ["pages/index.svelte-47897526.js", "chunks/vendor-bdb054b9.js", "chunks/navigation-51f4a605.js", "chunks/singletons-12a22614.js"], "styles": [] }, "src/routes/[searched]/__layout.svelte": { "entry": "pages/[searched]/__layout.svelte-cf068796.js", "css": [], "js": ["pages/[searched]/__layout.svelte-cf068796.js", "chunks/vendor-bdb054b9.js", "chunks/navigation-51f4a605.js", "chunks/singletons-12a22614.js"], "styles": [] }, "src/routes/[searched]/index.svelte": { "entry": "pages/[searched]/index.svelte-ec41f8ef.js", "css": [], "js": ["pages/[searched]/index.svelte-ec41f8ef.js", "chunks/vendor-bdb054b9.js", "chunks/stores-1dcf35a6.js", "chunks/navigation-51f4a605.js", "chunks/singletons-12a22614.js"], "styles": [] }, "src/routes/[searched]/[songId].svelte": { "entry": "pages/[searched]/[songId].svelte-5e4707ca.js", "css": [], "js": ["pages/[searched]/[songId].svelte-5e4707ca.js", "chunks/vendor-bdb054b9.js", "chunks/stores-1dcf35a6.js"], "styles": [] } };
+var metadata_lookup = { "src/routes/__layout.svelte": { "entry": "pages/__layout.svelte-95a31872.js", "css": ["assets/pages/__layout.svelte-0c931a5f.css"], "js": ["pages/__layout.svelte-95a31872.js", "chunks/vendor-bdb054b9.js"], "styles": [] }, ".svelte-kit/build/components/error.svelte": { "entry": "error.svelte-7570a9c4.js", "css": [], "js": ["error.svelte-7570a9c4.js", "chunks/vendor-bdb054b9.js"], "styles": [] }, "src/routes/index.svelte": { "entry": "pages/index.svelte-bde6af8f.js", "css": [], "js": ["pages/index.svelte-bde6af8f.js", "chunks/vendor-bdb054b9.js", "chunks/navigation-51f4a605.js", "chunks/singletons-12a22614.js"], "styles": [] }, "src/routes/[searched]/__layout.svelte": { "entry": "pages/[searched]/__layout.svelte-9193c03b.js", "css": [], "js": ["pages/[searched]/__layout.svelte-9193c03b.js", "chunks/vendor-bdb054b9.js", "chunks/navigation-51f4a605.js", "chunks/singletons-12a22614.js"], "styles": [] }, "src/routes/[searched]/index.svelte": { "entry": "pages/[searched]/index.svelte-6ac8945e.js", "css": [], "js": ["pages/[searched]/index.svelte-6ac8945e.js", "chunks/vendor-bdb054b9.js", "chunks/Loading-577c58c3.js", "chunks/navigation-51f4a605.js", "chunks/singletons-12a22614.js"], "styles": [] }, "src/routes/[searched]/[songId].svelte": { "entry": "pages/[searched]/[songId].svelte-611807c9.js", "css": [], "js": ["pages/[searched]/[songId].svelte-611807c9.js", "chunks/vendor-bdb054b9.js", "chunks/Loading-577c58c3.js"], "styles": [] } };
 async function load_component(file) {
   const { entry, css: css2, js, styles } = metadata_lookup[file];
   return {
@@ -2585,7 +2585,7 @@ var Routes = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   var searched = "";
   return `<section><div class="${"flex flex-col items-center justify-center"}"><div class="${"text-5xl text-center text-white font-semibold mb-12"}">Search an artist</div>
 		<div class="${"w-full flex rounded-md bg-white bg-opacity-20 p-1 border border-white border-opacity-30"}"><input class="${"w-4/5 bg-transparent text-white"}" type="${"text"}"${add_attribute("value", searched, 0)}>
-			<button class="${"w-1/5 p-2 rounded-md bg-white font-medium"}">Search</button></div></div></section>`;
+			<button class="${"w-1/5 p-2 rounded-md bg-white font-medium hover:bg-blue-300 transition-all"}">${escape("Search")}</button></div></div></section>`;
 });
 var index$1 = /* @__PURE__ */ Object.freeze({
   __proto__: null,
@@ -2596,8 +2596,8 @@ var back = "/_app/assets/backIcon-5f04394b.svg";
 var home = "/_app/assets/homeIcon-853ee5b0.svg";
 var _layout = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<div class="${"flex items-center justify-between mb-12"}"><button class="${"flex items-center justify-center text-white"}"><img${add_attribute("src", back, 0)} alt="${"back"}" class="${"h-4"}">
-    <div class="${"ml-2"}">Back</div></button>
-  <button class="${"flex items-center justify-center text-white"}"><img${add_attribute("src", home, 0)} alt="${"back"}" class="${"h-5"}"></button></div>
+		<div class="${"ml-2"}">Back</div></button>
+	<button class="${"flex items-center justify-center text-white hover:bg-blue-300 transition-all"}"><img${add_attribute("src", home, 0)} alt="${"back"}" class="${"h-5"}"></button></div>
 ${slots.default ? slots.default({}) : ``}`;
 });
 var __layout = /* @__PURE__ */ Object.freeze({
@@ -2629,16 +2629,23 @@ var page = {
     return store.subscribe(fn);
   }
 };
+var Loading = create_ssr_component(($$result, $$props, $$bindings, slots) => {
+  let { msg } = $$props;
+  if ($$props.msg === void 0 && $$bindings.msg && msg !== void 0)
+    $$bindings.msg(msg);
+  return `<div class="${"items-center justify-center"}"><h1>${escape(msg)}</h1></div>`;
+});
 var U5Bsearchedu5D = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let $$unsubscribe_page;
   $$unsubscribe_page = subscribe(page, (value) => value);
   let songResults = [];
   $$unsubscribe_page();
-  return `<section><div class="${"grid grid-cols-2 md:grid-cols-3 grod-flow row gap-3"}">${songResults.length ? each(songResults, (song) => `<button class="${"p-3 flex bg-white rounded-md bg-opacity-20 border-2 border-white border-opacity-30"}"><img${add_attribute("src", song.artworkUrl100, 0)} alt="${"img"}" class="${"rounded-md mr-4 w-1/4"}">
+  return `<section><div class="${"grid grid-cols-2 md:grid-cols-3 grod-flow row gap-3"}">${each(songResults, (song) => `<button class="${"p-3 flex bg-white rounded-md bg-opacity-20 border-2 border-white border-opacity-30 hover:bg-blue-300 transition-all"}"><img${add_attribute("src", song.artworkUrl100, 0)} alt="${"img"}" class="${"rounded-md mr-4 w-1/4"}">
 				<div class="${"flex flex-col items-start text-left"}"><div class="${"mb-2 h-6 overflow-hidden"}">${escape(song.trackName)}</div>
 					<div class="${"text-xs font-bold"}">${escape(song.artistName)}</div></div>
-			</button>`) : `<div class="${"items-center justify-center"}"><h1>Loading....!</h1>
-			</div>`}</div></section>`;
+			</button>`)}
+
+		${`${validate_component(Loading, "Loading").$$render($$result, { msg: "Loading...!" }, {}, {})}`}</div></section>`;
 });
 var index = /* @__PURE__ */ Object.freeze({
   __proto__: null,
@@ -2652,7 +2659,7 @@ var U5BsongIdu5D = create_ssr_component(($$result, $$props, $$bindings, slots) =
   let loading = true;
   const getSong = async () => {
     var songId = $page.params.songId;
-    const itunesSearched = await fetch(`https://itunes.apple.com/search?term=${songId}&entity=song`);
+    const itunesSearched = await fetch(`https://itunes.apple.com/search?term=${songId}&entity=song`, { mode: "cors" });
     var res = await itunesSearched.json();
     songResults = res.results[0];
     loading = false;
@@ -2664,7 +2671,7 @@ var U5BsongIdu5D = create_ssr_component(($$result, $$props, $$bindings, slots) =
 
 <section>${!loading ? `<div class="${"mt-12 flex flex-col items-center justify-center"}"><h1 class="${"text-3xl font-bold text-center mb-12"}">${escape(songResults.trackName)}</h1>
 			<img${add_attribute("src", songResults.artworkUrl100, 0)} alt="${"img"}" class="${"w-1/4 rounded-md mb-12"}">
-			<audio controls><source${add_attribute("src", songResults.previewUrl, 0)} type="${"audio/mpeg"}"></audio></div>` : `<div class="${"items-center justify-center"}"><h1>Loading....</h1></div>`}</section>`;
+			<audio controls><source${add_attribute("src", songResults.previewUrl, 0)} type="${"audio/mpeg"}"></audio></div>` : `${validate_component(Loading, "Loading").$$render($$result, { msg: "Loading...!" }, {}, {})}`}</section>`;
 });
 var _songId_ = /* @__PURE__ */ Object.freeze({
   __proto__: null,
