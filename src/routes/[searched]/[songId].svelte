@@ -11,6 +11,7 @@
 </script> -->
 <script>
 	import { page } from '$app/stores';
+	import Loading from '$lib/Loading.svelte';
 
 	let songResults = [];
 	let loading = true;
@@ -40,8 +41,6 @@
 			</audio>
 		</div>
 	{:else}
-		<div class="items-center justify-center">
-			<h1>Loading....</h1>
-		</div>
+		<Loading msg="Loading...!" />
 	{/if}
 </section>

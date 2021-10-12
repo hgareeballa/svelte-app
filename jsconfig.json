@@ -1,8 +1,7 @@
 {
 	"compilerOptions": {
 		"baseUrl": ".",
-		"paths": {
-			"$com": ["src/components"],
+		"paths": {			
 			"$lib": ["src/lib"],
 			"$lib/*": ["src/lib/*"]
 		}

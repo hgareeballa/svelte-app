@@ -2,6 +2,7 @@
 	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
 	import { goto } from '$app/navigation';
+	import Loading from '$lib/Loading.svelte';
 
 	let songResults = [];
 	let loading = true;
@@ -37,13 +38,9 @@
 		{/each}
 
 		{#if loading}
-			<div class="items-center justify-center">
-				<h1>Loading....!</h1>
-			</div>
+			<Loading msg="Loading...!" />
 		{:else if songResults.length == 0}
-			<div class="items-center justify-center">
-				<h1>No Results Found!</h1>
-			</div>
+			<Loading msg="No Results Found...!" />
 		{/if}
 	</div>
 </section>
