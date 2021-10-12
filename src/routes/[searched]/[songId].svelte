@@ -18,7 +18,10 @@
 	const getSong = async () => {
 		var songId = $page.params.songId;
 		const itunesSearched = await fetch(
-			`https://itunes.apple.com/search?term=${songId}&entity=song`
+			`https://itunes.apple.com/search?term=${songId}&entity=song`,
+			{
+				mode: 'cors'
+			}
 		);
 		var res = await itunesSearched.json();
 		songResults = res.results[0];

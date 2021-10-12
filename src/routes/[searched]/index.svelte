@@ -4,15 +4,20 @@
 	import { goto } from '$app/navigation';
 
 	let songResults = [];
+	let loading = true;
 
 	onMount(async () => {
 		var searched = $page.params.searched;
 		const itunesSearched = await fetch(
-			`https://itunes.apple.com/search?term=${searched}&entity=song`
+			`https://itunes.apple.com/search?term=${searched}&entity=song`,
+			{
+				mode: 'cors'
+			}
 		);
 		var res = await itunesSearched.json();
 		songResults = res.results;
-		console.log(songResults);
+		loading = false;
+		console.log(songResults, loading);
 	});
 </script>
 
@@ -29,10 +34,16 @@
 					<div class="text-xs font-bold">{song.artistName}</div>
 				</div>
 			</button>
-		{:else}
+		{/each}
+
+		{#if loading}
 			<div class="items-center justify-center">
 				<h1>Loading....!</h1>
 			</div>
-		{/each}
+		{:else if songResults.length == 0}
+			<div class="items-center justify-center">
+				<h1>No Results Found!</h1>
+			</div>
+		{/if}
 	</div>
 </section>
