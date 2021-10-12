@@ -1,8 +1,9 @@
 <script>
 	import { goto } from '$app/navigation';
-
+	let loading = false;
 	var searched = '';
 	const search = () => {
+		loading = true;
 		goto(`${searched}`);
 	};
 </script>
@@ -19,7 +20,9 @@
 				bind:value={searched}
 				on:keyup={(e) => e.key === 'Enter' && search()}
 			/>
-			<button class="w-1/5 p-2 rounded-md bg-white font-medium" on:click={search}>Search</button>
+			<button class="w-1/5 p-2 rounded-md bg-white font-medium" on:click={search}>
+				{loading ? 'Searching...' : 'Search'}
+			</button>
 		</div>
 	</div>
 </section>
