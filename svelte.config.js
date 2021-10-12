@@ -1,19 +1,12 @@
-// /** @type {import('@sveltejs/kit').Config} */
-// const config = {
-// 	kit: {
-// 		// hydrate the <div id="svelte"> element in src/app.html
-// 		target: '#svelte'
-// 	}
-// };
+/** @type {import('@sveltejs/kit').Config} */
+import vercel from '@sveltejs/adapter-vercel';
 
-//export default config;
-
-
-import adapter from '@sveltejs/adapter-netlify';
-
-export default {
+const config = {
 	kit: {
-		adapter: adapter(), // currently the adapter does not take any options
-		target: '#svelte'
+		// hydrate the <div id="svelte"> element in src/app.html
+		target: '#svelte',
+		adapter: vercel()
 	}
 };
+
+export default config;
